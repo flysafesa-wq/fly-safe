@@ -156,12 +156,12 @@ export const i18n = {
       subtitle: "فريقنا جاهز لمساعدتك في التخطيط لرحلتك المثالية",
       info: {
         address: "طريق عمر بن الخطاب، البشر، بريدة 52379، المملكة العربية السعودية",
-        phone: "+966 11 234 5678",
-        whatsapp: "+966 50 123 4567",
+        phone: "+966 55 997 7926",
+        whatsapp: "+966 55 997 7926",
         email: "info@flysafesa.com",
         hours: "صباحاً: ٨ – ١٢  |  مساءً: ٤ – ١١",
         addressLabel: "العنوان",
-        phoneLabel: "الهاتف / واتساب",
+        phoneLabel: "موبايل / واتساب",
         emailLabel: "البريد الإلكتروني",
         hoursLabel: "ساعات العمل"
       },
@@ -357,12 +357,12 @@ export const i18n = {
       subtitle: "Our team is ready to help you plan your perfect journey",
       info: {
         address: "Umar Ibn Al Khatab Rd, Al Bishr, Buraydah 52379, Saudi Arabia",
-        phone: "+966 11 234 5678",
-        whatsapp: "+966 50 123 4567",
+        phone: "+966 55 997 7926",
+        whatsapp: "+966 55 997 7926",
         email: "info@flysafesa.com",
         hours: "8AM–12PM  |  4PM–11PM",
         addressLabel: "Address",
-        phoneLabel: "Phone / WhatsApp",
+        phoneLabel: "Mobile / WhatsApp",
         emailLabel: "Email",
         hoursLabel: "Working Hours"
       },
