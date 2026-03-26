@@ -67,7 +67,7 @@ export function Contact() {
 
   const infoItems = [
     { icon: <MapPin className="w-6 h-6 text-primary" />, label: t.contact.info.addressLabel, value: t.contact.info.address },
-    { icon: <Phone className="w-6 h-6 text-primary" />, label: t.contact.info.phoneLabel, value: `${t.contact.info.phone}\n${t.contact.info.whatsapp}` },
+    { icon: <Phone className="w-6 h-6 text-primary" />, label: t.contact.info.phoneLabel, value: t.contact.info.phone },
     { icon: <Mail className="w-6 h-6 text-primary" />, label: t.contact.info.emailLabel, value: t.contact.info.email },
     { icon: <Clock className="w-6 h-6 text-primary" />, label: t.contact.info.hoursLabel, value: t.contact.info.hours },
   ];
