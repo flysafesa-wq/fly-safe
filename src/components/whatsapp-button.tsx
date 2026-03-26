@@ -14,7 +14,7 @@ export function WhatsAppButton() {
       <Tooltip>
         <TooltipTrigger asChild>
           <a
-            href="https://wa.me/966501234567"
+            href="https://wa.me/966559977926"
             target="_blank"
             rel="noopener noreferrer"
             className="relative flex items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-300"
