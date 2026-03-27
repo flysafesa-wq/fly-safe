@@ -54,15 +54,41 @@ export function Contact() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    setTimeout(() => {
-      console.log('Form Submitted:', values);
-      setIsSubmitting(false);
-      form.reset();
-      toast({
-        title: t.contact.form.successTitle,
-        description: t.contact.form.success,
-      });
-    }, 1500);
+
+    const lang = dir === 'rtl' ? 'ar' : 'en';
+    const lines = lang === 'ar'
+      ? [
+          '🌟 *طلب سفر جديد – فلاي سيف*',
+          '',
+          `👤 *الاسم:* ${values.name}`,
+          `📧 *البريد:* ${values.email}`,
+          `📱 *الجوال:* ${values.phone}`,
+          `✈️ *الخدمة:* ${values.serviceType}`,
+          values.travelDates ? `📅 *تاريخ السفر:* ${values.travelDates}` : '',
+          `💬 *الرسالة:* ${values.message}`,
+        ]
+      : [
+          '🌟 *New Travel Inquiry – Fly Safe*',
+          '',
+          `👤 *Name:* ${values.name}`,
+          `📧 *Email:* ${values.email}`,
+          `📱 *Phone:* ${values.phone}`,
+          `✈️ *Service:* ${values.serviceType}`,
+          values.travelDates ? `📅 *Travel Date:* ${values.travelDates}` : '',
+          `💬 *Message:* ${values.message}`,
+        ];
+
+    const message = lines.filter(Boolean).join('\n');
+    const whatsappUrl = `https://wa.me/966559977926?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, '_blank');
+
+    setIsSubmitting(false);
+    form.reset();
+    toast({
+      title: t.contact.form.successTitle,
+      description: t.contact.form.success,
+    });
   }
 
   const infoItems = [
