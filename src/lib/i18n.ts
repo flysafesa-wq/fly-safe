@@ -33,11 +33,6 @@ export const i18n = {
           desc: "من المنتجعات الفاخرة ذات 5 نجوم إلى الخيارات الاقتصادية. نقدم مجموعة مختارة من الفنادق في أكثر من 200 وجهة.",
         },
         {
-          id: "cars",
-          title: "تأجير السيارات",
-          desc: "تأجير سيارات فاخرة مع خدمة سائق عند الطلب. اختر من الأسطول الاقتصادي إلى الفاخر للأعمال أو الترفيه.",
-        },
-        {
           id: "hajj",
           title: "باقات الحج والعمرة",
           desc: "باقات حج وعمرة روحانية مثرية مع إقامة VIP في مكة المكرمة والمدينة المنورة. تصاريح مرتبة مسبقاً وخدمة إرشادية كاملة.",
@@ -182,7 +177,11 @@ export const i18n = {
         errorPhone: "رقم الهاتف مطلوب",
         errorService: "الرجاء اختيار الخدمة",
         errorMessage: "يجب أن تكون الرسالة 10 أحرف على الأقل",
-        types: ["حجز الطيران", "الفنادق", "تأجير السيارات", "باقات الحج والعمرة", "رحلات داخل المملكة", "رحلات دولية", "خدمات التأشيرات", "أخرى"]
+        fromCity: "مدينة المغادرة",
+        fromCityPlaceholder: "مثال: الرياض",
+        toCity: "مدينة الوصول",
+        toCityPlaceholder: "مثال: لندن",
+        types: ["حجز الطيران", "الفنادق", "باقات الحج والعمرة", "رحلات داخل المملكة", "رحلات دولية", "خدمات التأشيرات", "أخرى"]
       }
     },
     footer: {
@@ -229,11 +228,6 @@ export const i18n = {
           id: "hotels",
           title: "Hotels",
           desc: "From luxury 5-star resorts to budget-friendly options. We offer curated hotel selections across 200+ destinations worldwide.",
-        },
-        {
-          id: "cars",
-          title: "Car Rentals",
-          desc: "Premium vehicle rentals with chauffeur service available. Choose from economy to luxury fleets for business or leisure.",
         },
         {
           id: "hajj",
@@ -380,7 +374,11 @@ export const i18n = {
         errorPhone: "Phone number is required",
         errorService: "Please select a service",
         errorMessage: "Message must be at least 10 characters",
-        types: ["Flight Booking", "Hotels", "Car Rental", "Hajj & Umrah Packages", "Domestic Trip", "International Tour", "Visa Services", "Other"]
+        fromCity: "Departure City",
+        fromCityPlaceholder: "e.g. Riyadh",
+        toCity: "Arrival City",
+        toCityPlaceholder: "e.g. London",
+        types: ["Flight Booking", "Hotels", "Hajj & Umrah Packages", "Domestic Trip", "International Tour", "Visa Services", "Other"]
       }
     },
     footer: {
