@@ -36,7 +36,8 @@ export function Contact() {
     email: z.string().email(t.contact.form.errorEmail),
     phone: z.string().min(8, t.contact.form.errorPhone),
     serviceType: z.string().min(1, t.contact.form.errorService),
-    travelDates: z.string().optional(),
+    travelStart: z.string().optional(),
+    travelEnd: z.string().optional(),
     message: z.string().min(10, t.contact.form.errorMessage),
   });
 
@@ -47,7 +48,8 @@ export function Contact() {
       email: '',
       phone: '',
       serviceType: '',
-      travelDates: '',
+      travelStart: '',
+      travelEnd: '',
       message: '',
     },
   });
@@ -64,7 +66,8 @@ export function Contact() {
           `📧 *البريد:* ${values.email}`,
           `📱 *الجوال:* ${values.phone}`,
           `✈️ *الخدمة:* ${values.serviceType}`,
-          values.travelDates ? `📅 *تاريخ السفر:* ${values.travelDates}` : '',
+          values.travelStart ? `🛫 *تاريخ المغادرة:* ${values.travelStart}` : '',
+          values.travelEnd ? `🛬 *تاريخ العودة:* ${values.travelEnd}` : '',
           `💬 *الرسالة:* ${values.message}`,
         ]
       : [
@@ -74,7 +77,8 @@ export function Contact() {
           `📧 *Email:* ${values.email}`,
           `📱 *Phone:* ${values.phone}`,
           `✈️ *Service:* ${values.serviceType}`,
-          values.travelDates ? `📅 *Travel Date:* ${values.travelDates}` : '',
+          values.travelStart ? `🛫 *Departure:* ${values.travelStart}` : '',
+          values.travelEnd ? `🛬 *Return:* ${values.travelEnd}` : '',
           `💬 *Message:* ${values.message}`,
         ];
 
@@ -230,19 +234,34 @@ export function Contact() {
                   />
                 </div>
 
-                <FormField
-                  control={form.control}
-                  name="travelDates"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>{t.contact.form.travelDates}</FormLabel>
-                      <FormControl>
-                        <Input type="date" className="bg-background" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="travelStart"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t.contact.form.travelStart}</FormLabel>
+                        <FormControl>
+                          <Input type="date" className="bg-background" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="travelEnd"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t.contact.form.travelEnd}</FormLabel>
+                        <FormControl>
+                          <Input type="date" className="bg-background" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
 
                 <FormField
                   control={form.control}
