@@ -14,18 +14,18 @@ export const i18n = {
     },
     hero: {
       title: "استكشف العالم مع فلاي سيف",
-      subtitle: "شريكك السعودي الموثوق في السفر بخبرة تتجاوز 15 عاماً. من الرياض إلى روما، نجعل كل رحلة لا تُنسى.",
+      subtitle: "شريكك الموثوق في السفر بخبرة تتجاوز 15 عاماً. من قلب المملكة إلى أبعد نقطة في العالم، نجعل كل رحلة لا تُنسى.",
       ctaPrimary: "احجز رحلتك",
       ctaSecondary: "اتصل بنا",
     },
     services: {
       title: "خدماتنا",
-      subtitle: "حلول سفر شاملة مصممة للمسافر السعودي",
+      subtitle: "حلول سفر شاملة مصممة لكل مسافر",
       items: [
         {
           id: "flights",
           title: "حجز الطيران",
-          desc: "رحلات داخلية ودولية بأفضل الأسعار. نتعاون مع جميع شركات الطيران الكبرى بما فيها السعودية وفلاي ناس.",
+          desc: "رحلات داخلية ودولية بأفضل الأسعار. نتعاون مع جميع شركات الطيران الكبرى حول العالم لنوفر لك أفضل الخيارات.",
         },
         {
           id: "hotels",
@@ -50,7 +50,7 @@ export const i18n = {
         {
           id: "international",
           title: "رحلات جماعية دولية",
-          desc: "جولات دولية مُدارة بالكامل إلى أوروبا وآسيا والأمريكتين وأفريقيا. باقات شاملة مع مرشدين يتحدثون العربية.",
+          desc: "جولات دولية مُدارة بالكامل إلى أوروبا وآسيا والأمريكتين وأفريقيا. باقات شاملة مع مرشدين متعددي اللغات.",
         },
         {
           id: "group-tours",
@@ -90,9 +90,9 @@ export const i18n = {
       features: [
         "دعم العملاء 24/7",
         "وكالة معتمدة من الاياتا",
-        "شبكة سعودية حصرية",
+        "شبكة واسعة حول العالم",
         "أسعار شفافة",
-        "مرشدون يتحدثون العربية",
+        "مرشدون متعددو اللغات",
         "وصول إلى الصالة VIP"
       ]
     },
@@ -117,7 +117,7 @@ export const i18n = {
         },
         {
           q: "ما الذي يميز فلاي سيف عن منصات الحجز الإلكترونية؟",
-          a: "على عكس المنصات الآلية، نقدم خدمة شخصية ومشورة خبراء وأسعاراً حصرية عبر شبكتنا السعودية ودعماً بشرياً على مدار الساعة."
+          a: "على عكس المنصات الآلية، نقدم خدمة شخصية ومشورة خبراء وأسعاراً حصرية ودعماً بشرياً على مدار الساعة."
         },
         {
           q: "هل تقدمون تأمين سفر؟",
@@ -140,15 +140,11 @@ export const i18n = {
         { name: "هيئة السياحة السعودية", desc: "هيئة السياحة السعودية الرسمية" },
         { name: "روح السعودية", desc: "اكتشف عجائب المملكة العربية السعودية" },
         { name: "تريب أدفايزر", desc: "مراجعات وتوصيات السفر" },
-        { name: "بوكينج.كوم", desc: "فنادق وإقامة حول العالم" },
-        { name: "سكاي سكانر", desc: "قارن الرحلات والفنادق والسيارات" },
         { name: "اياتا", desc: "الاتحاد الدولي للنقل الجوي" },
         { name: "الخطوط السعودية", desc: "الخطوط الجوية العربية السعودية" },
         { name: "فلاي أديال", desc: "رحلات داخلية سعودية بأسعار معقولة" },
-        { name: "المسافر", desc: "منصة حجز السفر السعودية" },
         { name: "لونلي بلانيت", desc: "أدلة ونصائح السفر العالمية" },
-        { name: "وزارة الحج والعمرة", desc: "وزارة الحج والعمرة الرسمية" },
-        { name: "خرائط جوجل", desc: "استكشف الوجهات على خرائط جوجل" }
+        { name: "وزارة الحج والعمرة", desc: "وزارة الحج والعمرة الرسمية" }
       ]
     },
     contact: {
@@ -173,7 +169,8 @@ export const i18n = {
         phone: "الهاتف",
         phonePlaceholder: "+966 50 000 0000",
         serviceType: "نوع الخدمة",
-        travelDates: "تواريخ السفر",
+        travelStart: "تاريخ المغادرة",
+        travelEnd: "تاريخ العودة",
         message: "الرسالة",
         messagePlaceholder: "أخبرنا عن رحلتك المخططة...",
         submit: "إرسال الرسالة",
@@ -215,18 +212,18 @@ export const i18n = {
     },
     hero: {
       title: "Explore the World with Fly Safe",
-      subtitle: "Your trusted Saudi travel partner with over 15 years of experience. From Riyadh to Rome, we make every journey unforgettable.",
+      subtitle: "Your trusted travel partner with over 15 years of experience. From the heart of Saudi to the far corners of the world, we make every journey unforgettable.",
       ctaPrimary: "Book Your Trip",
       ctaSecondary: "Contact Us",
     },
     services: {
       title: "Our Services",
-      subtitle: "Comprehensive travel solutions tailored for Saudi travellers",
+      subtitle: "Comprehensive travel solutions tailored for every traveller",
       items: [
         {
           id: "flights",
           title: "Flights",
-          desc: "Domestic and international flights at the best prices. We partner with all major airlines including Saudia, Flynas, and international carriers.",
+          desc: "Domestic and international flights at the best prices. We partner with all major airlines worldwide to bring you the widest choice.",
         },
         {
           id: "hotels",
@@ -251,7 +248,7 @@ export const i18n = {
         {
           id: "international",
           title: "International Group Tours",
-          desc: "Fully managed international tours to Europe, Asia, Americas and Africa. All-inclusive packages with Arabic-speaking guides.",
+          desc: "Fully managed international tours to Europe, Asia, Americas and Africa. All-inclusive packages with multilingual guides.",
         },
         {
           id: "group-tours",
@@ -291,9 +288,9 @@ export const i18n = {
       features: [
         "24/7 Customer Support",
         "IATA Certified Agency",
-        "Exclusive Saudi Network",
+        "Worldwide Network",
         "Transparent Pricing",
-        "Arabic-Speaking Guides",
+        "Multilingual Guides",
         "VIP Lounge Access"
       ]
     },
@@ -318,7 +315,7 @@ export const i18n = {
         },
         {
           q: "What makes Fly Safe different from online booking platforms?",
-          a: "Unlike automated platforms, we offer personalised service, expert advice, exclusive rates through our Saudi network, and 24/7 human support — especially valuable during travel disruptions."
+          a: "Unlike automated platforms, we offer personalised service, expert advice, exclusive rates, and 24/7 human support — especially valuable during travel disruptions."
         },
         {
           q: "Do you offer travel insurance?",
@@ -341,15 +338,11 @@ export const i18n = {
         { name: "Saudi Tourism Authority", desc: "Official Saudi tourism authority" },
         { name: "Visit Saudi", desc: "Discover Saudi Arabia's wonders" },
         { name: "TripAdvisor", desc: "Reviews & travel recommendations" },
-        { name: "Booking.com", desc: "Hotels & accommodations worldwide" },
-        { name: "Skyscanner", desc: "Compare flights, hotels & cars" },
         { name: "IATA", desc: "International Air Transport Association" },
         { name: "Saudia Airlines", desc: "Saudi Arabia's national airline" },
         { name: "Flyadeal", desc: "Affordable Saudi domestic flights" },
-        { name: "Almosafer", desc: "Saudi travel booking platform" },
         { name: "Lonely Planet", desc: "Global travel guides & tips" },
-        { name: "Ministry of Hajj & Umrah", desc: "Official Hajj & Umrah authority" },
-        { name: "Google Maps Travel", desc: "Explore destinations on Google Maps" }
+        { name: "Ministry of Hajj & Umrah", desc: "Official Hajj & Umrah authority" }
       ]
     },
     contact: {
@@ -374,7 +367,8 @@ export const i18n = {
         phone: "Phone Number",
         phonePlaceholder: "+966 50 000 0000",
         serviceType: "Service Type",
-        travelDates: "Travel Dates",
+        travelStart: "Departure Date",
+        travelEnd: "Return Date",
         message: "Message",
         messagePlaceholder: "Tell us about your planned trip...",
         submit: "Send Message",
