@@ -3,16 +3,16 @@ import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
 const saudiImages = [
-  // AlUla – desert sandstone canyons
-  "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80",
-  // Jeddah – Red Sea waterfront resort
-  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80",
-  // Abha – misty green mountain peaks
-  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
-  // Riyadh – modern city skyline
-  "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80",
-  // NEOM – futuristic architecture
-  "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+  // AlUla – #2 selected by user
+  "https://images.unsplash.com/photo-1687371836972-3485aad61187?w=600&q=80",
+  // Jeddah – #2 selected by user
+  "https://images.unsplash.com/photo-1699954669485-812988f5c2db?w=600&q=80",
+  // Abha – #1 selected by user
+  "https://images.unsplash.com/photo-1655911153461-d511211b6772?w=600&q=80",
+  // Riyadh – #4 selected by user
+  "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=600&q=80",
+  // NEOM – #1 selected by user
+  "https://images.unsplash.com/photo-1707343848552-893e05dba6ac?w=600&q=80",
 ];
 
 const intImages = [
