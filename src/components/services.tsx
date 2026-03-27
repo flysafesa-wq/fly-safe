@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Plane, Building2, Car, Moon, MapPin, Globe2, Users, LucideIcon } from 'lucide-react';
+import { Plane, Building2, Car, Moon, MapPin, Globe2, Stamp, LucideIcon } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
 const icons: Record<string, LucideIcon> = {
@@ -9,7 +9,7 @@ const icons: Record<string, LucideIcon> = {
   hajj: Moon,
   domestic: MapPin,
   international: Globe2,
-  "group-tours": Users,
+  visa: Stamp,
 };
 
 export function Services() {
