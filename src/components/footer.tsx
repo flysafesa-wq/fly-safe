@@ -1,13 +1,13 @@
-import { Plane, Facebook, Twitter, Instagram, Linkedin, Youtube, ExternalLink } from 'lucide-react';
+import { Plane, Facebook, Twitter, Instagram, Youtube, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
 const partnerLinks = [
   { url: "https://www.sta.gov.sa", en: "Saudi Tourism Authority", ar: "هيئة السياحة السعودية" },
   { url: "https://www.visitsaudi.com", en: "Visit Saudi", ar: "روح السعودية" },
   { url: "https://www.saudia.com", en: "Saudia Airlines", ar: "الخطوط السعودية" },
-  { url: "https://www.almosafer.com", en: "Almosafer", ar: "المسافر" },
   { url: "https://www.haj.gov.sa", en: "Ministry of Hajj & Umrah", ar: "وزارة الحج والعمرة" },
   { url: "https://www.iata.org", en: "IATA", ar: "اياتا" },
+  { url: "https://www.lonelyplanet.com", en: "Lonely Planet", ar: "لونلي بلانيت" },
 ];
 
 export function Footer() {
@@ -38,7 +38,6 @@ export function Footer() {
               <a href="https://facebook.com/flysafe.sa" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"><Facebook className="w-5 h-5" /></a>
               <a href="https://twitter.com/flysafe_sa" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"><Twitter className="w-5 h-5" /></a>
               <a href="https://instagram.com/flysafe.sa" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"><Instagram className="w-5 h-5" /></a>
-              <a href="https://linkedin.com/company/flysafe-sa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"><Linkedin className="w-5 h-5" /></a>
               <a href="https://youtube.com/@flysafe.sa" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"><Youtube className="w-5 h-5" /></a>
             </div>
           </div>
