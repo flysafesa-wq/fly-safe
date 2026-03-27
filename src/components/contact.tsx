@@ -85,7 +85,13 @@ export function Contact() {
     const message = lines.filter(Boolean).join('\n');
     const whatsappUrl = `https://wa.me/966559977926?text=${encodeURIComponent(message)}`;
 
-    window.open(whatsappUrl, '_blank');
+    const a = document.createElement('a');
+    a.href = whatsappUrl;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 
     setIsSubmitting(false);
     form.reset();
