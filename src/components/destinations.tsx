@@ -3,15 +3,15 @@ import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
 const saudiImages = [
-  // AlUla – Hegra ancient tombs
-  "https://images.unsplash.com/photo-1586183191557-ab6ef10e4929?w=600&q=80",
-  // Jeddah – Al-Balad / Red Sea waterfront
-  "https://images.unsplash.com/photo-1614616951798-5d29c7c86d84?w=600&q=80",
-  // Abha – green misty mountains of Aseer
-  "https://images.unsplash.com/photo-1608226080624-3e1ae97e3e6a?w=600&q=80",
-  // Riyadh – Kingdom Centre Tower skyline
+  // AlUla – desert sandstone canyons
+  "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80",
+  // Jeddah – Red Sea waterfront resort
+  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80",
+  // Abha – misty green mountain peaks
+  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
+  // Riyadh – modern city skyline
   "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80",
-  // NEOM – futuristic desert landscape
+  // NEOM – futuristic architecture
   "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
 ];
 
