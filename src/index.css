@@ -89,6 +89,8 @@ html, body {
   scroll-behavior: smooth;
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html[lang="ar"] body {
