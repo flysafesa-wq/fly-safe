@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -36,6 +36,8 @@ export function Contact() {
     email: z.string().email(t.contact.form.errorEmail),
     phone: z.string().min(8, t.contact.form.errorPhone),
     serviceType: z.string().min(1, t.contact.form.errorService),
+    fromCity: z.string().optional(),
+    toCity: z.string().optional(),
     travelStart: z.string().optional(),
     travelEnd: z.string().optional(),
     message: z.string().min(10, t.contact.form.errorMessage),
@@ -48,11 +50,17 @@ export function Contact() {
       email: '',
       phone: '',
       serviceType: '',
+      fromCity: '',
+      toCity: '',
       travelStart: '',
       travelEnd: '',
       message: '',
     },
   });
+
+  const serviceType = form.watch('serviceType');
+  const isFlightBooking =
+    serviceType === 'حجز الطيران' || serviceType === 'Flight Booking';
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
@@ -66,8 +74,10 @@ export function Contact() {
           `📧 *البريد:* ${values.email}`,
           `📱 *الجوال:* ${values.phone}`,
           `✈️ *الخدمة:* ${values.serviceType}`,
-          values.travelStart ? `🛫 *تاريخ المغادرة:* ${values.travelStart}` : '',
-          values.travelEnd ? `🛬 *تاريخ العودة:* ${values.travelEnd}` : '',
+          values.fromCity ? `🛫 *مدينة المغادرة:* ${values.fromCity}` : '',
+          values.toCity   ? `🛬 *مدينة الوصول:* ${values.toCity}`   : '',
+          values.travelStart ? `📅 *تاريخ المغادرة:* ${values.travelStart}` : '',
+          values.travelEnd   ? `📅 *تاريخ العودة:* ${values.travelEnd}`     : '',
           `💬 *الرسالة:* ${values.message}`,
         ]
       : [
@@ -77,8 +87,10 @@ export function Contact() {
           `📧 *Email:* ${values.email}`,
           `📱 *Phone:* ${values.phone}`,
           `✈️ *Service:* ${values.serviceType}`,
-          values.travelStart ? `🛫 *Departure:* ${values.travelStart}` : '',
-          values.travelEnd ? `🛬 *Return:* ${values.travelEnd}` : '',
+          values.fromCity ? `🛫 *From:* ${values.fromCity}` : '',
+          values.toCity   ? `🛬 *To:* ${values.toCity}`     : '',
+          values.travelStart ? `📅 *Departure:* ${values.travelStart}` : '',
+          values.travelEnd   ? `📅 *Return:* ${values.travelEnd}`      : '',
           `💬 *Message:* ${values.message}`,
         ];
 
@@ -103,9 +115,9 @@ export function Contact() {
 
   const infoItems = [
     { icon: <MapPin className="w-6 h-6 text-primary" />, label: t.contact.info.addressLabel, value: t.contact.info.address },
-    { icon: <Phone className="w-6 h-6 text-primary" />, label: t.contact.info.phoneLabel, value: t.contact.info.phone },
-    { icon: <Mail className="w-6 h-6 text-primary" />, label: t.contact.info.emailLabel, value: t.contact.info.email },
-    { icon: <Clock className="w-6 h-6 text-primary" />, label: t.contact.info.hoursLabel, value: t.contact.info.hours },
+    { icon: <Phone className="w-6 h-6 text-primary" />,  label: t.contact.info.phoneLabel,   value: t.contact.info.phone   },
+    { icon: <Mail  className="w-6 h-6 text-primary" />,  label: t.contact.info.emailLabel,   value: t.contact.info.email   },
+    { icon: <Clock className="w-6 h-6 text-primary" />,  label: t.contact.info.hoursLabel,   value: t.contact.info.hours   },
   ];
 
   return (
@@ -139,7 +151,8 @@ export function Contact() {
                     <div>
                       <h4 className="font-bold text-foreground mb-1">{item.label}</h4>
                       {item.value.split('\n').map((line, j) => (
-                        <p key={j} className="text-muted-foreground" dir="auto" style={{ textAlign: dir === 'rtl' ? 'right' : 'left' }}>
+                        <p key={j} className="text-muted-foreground" dir="auto"
+                          style={{ textAlign: dir === 'rtl' ? 'right' : 'left' }}>
                           {line}
                         </p>
                       ))}
@@ -151,7 +164,7 @@ export function Contact() {
 
             <div className="rounded-2xl overflow-hidden shadow-lg h-[300px] border border-border/50">
               <iframe
-                title="Fly Safe Office Location - Riyadh, Saudi Arabia"
+                title="Fly Safe Office Location"
                 src="https://maps.google.com/maps?q=26.370662,43.931090&hl=ar&z=15&output=embed"
                 width="100%"
                 height="100%"
@@ -173,6 +186,7 @@ export function Contact() {
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 
+                {/* Name + Email */}
                 <div className="grid sm:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
@@ -202,6 +216,7 @@ export function Contact() {
                   />
                 </div>
 
+                {/* Phone + Service Type */}
                 <div className="grid sm:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
@@ -210,7 +225,13 @@ export function Contact() {
                       <FormItem>
                         <FormLabel>{t.contact.form.phone}</FormLabel>
                         <FormControl>
-                          <Input placeholder={t.contact.form.phonePlaceholder} className="bg-background" dir="ltr" style={{ textAlign: dir === 'rtl' ? 'right' : 'left' }} {...field} />
+                          <Input
+                            placeholder={t.contact.form.phonePlaceholder}
+                            className="bg-background"
+                            dir="ltr"
+                            style={{ textAlign: dir === 'rtl' ? 'right' : 'left' }}
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -240,35 +261,81 @@ export function Contact() {
                   />
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="travelStart"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t.contact.form.travelStart}</FormLabel>
-                        <FormControl>
-                          <Input type="date" className="bg-background" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="travelEnd"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t.contact.form.travelEnd}</FormLabel>
-                        <FormControl>
-                          <Input type="date" className="bg-background" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
+                {/* Flight-only fields — slide in/out */}
+                <AnimatePresence initial={false}>
+                  {isFlightBooking && (
+                    <motion.div
+                      key="flight-fields"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      className="space-y-6 overflow-hidden"
+                    >
+                      {/* From / To cities */}
+                      <div className="grid sm:grid-cols-2 gap-6">
+                        <FormField
+                          control={form.control}
+                          name="fromCity"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>{t.contact.form.fromCity}</FormLabel>
+                              <FormControl>
+                                <Input placeholder={t.contact.form.fromCityPlaceholder} className="bg-background" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="toCity"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>{t.contact.form.toCity}</FormLabel>
+                              <FormControl>
+                                <Input placeholder={t.contact.form.toCityPlaceholder} className="bg-background" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
 
+                      {/* Departure / Return dates */}
+                      <div className="grid sm:grid-cols-2 gap-6">
+                        <FormField
+                          control={form.control}
+                          name="travelStart"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>{t.contact.form.travelStart}</FormLabel>
+                              <FormControl>
+                                <Input type="date" className="bg-background" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="travelEnd"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>{t.contact.form.travelEnd}</FormLabel>
+                              <FormControl>
+                                <Input type="date" className="bg-background" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                {/* Message — always visible */}
                 <FormField
                   control={form.control}
                   name="message"
