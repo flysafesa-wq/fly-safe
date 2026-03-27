@@ -163,7 +163,7 @@ export const i18n = {
       },
       form: {
         name: "الاسم الكامل",
-        namePlaceholder: "محمد العتيبي",
+        namePlaceholder: "محمد ابو تركي",
         email: "البريد الإلكتروني",
         emailPlaceholder: "your@email.com",
         phone: "الهاتف",
