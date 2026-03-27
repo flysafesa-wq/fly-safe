@@ -53,9 +53,9 @@ export const i18n = {
           desc: "جولات دولية مُدارة بالكامل إلى أوروبا وآسيا والأمريكتين وأفريقيا. باقات شاملة مع مرشدين متعددي اللغات.",
         },
         {
-          id: "group-tours",
-          title: "رحلات جماعية مُدارة",
-          desc: "تجارب سفر جماعية متكاملة بقيادة مرشدين متخصصين. لوجستيات كاملة، إقامة، مواصلات، وجداول مدروسة لمجموعات عائلية وشركات.",
+          id: "visa",
+          title: "خدمات التأشيرات",
+          desc: "دعم شامل للتأشيرات لجميع الوجهات الشهيرة حول العالم، بما فيها شنغن والمملكة المتحدة والولايات المتحدة وغيرها. خبراؤنا يتولون كافة الأوراق والمتطلبات نيابةً عنك.",
         }
       ]
     },
@@ -182,7 +182,7 @@ export const i18n = {
         errorPhone: "رقم الهاتف مطلوب",
         errorService: "الرجاء اختيار الخدمة",
         errorMessage: "يجب أن تكون الرسالة 10 أحرف على الأقل",
-        types: ["حجز الطيران", "الفنادق", "تأجير السيارات", "باقات الحج والعمرة", "رحلات داخل المملكة", "رحلات دولية", "أخرى"]
+        types: ["حجز الطيران", "الفنادق", "تأجير السيارات", "باقات الحج والعمرة", "رحلات داخل المملكة", "رحلات دولية", "خدمات التأشيرات", "أخرى"]
       }
     },
     footer: {
@@ -251,9 +251,9 @@ export const i18n = {
           desc: "Fully managed international tours to Europe, Asia, Americas and Africa. All-inclusive packages with multilingual guides.",
         },
         {
-          id: "group-tours",
-          title: "Managed Group Tours",
-          desc: "End-to-end group travel experiences led by specialist guides. Full logistics, accommodation, transport, and itineraries for families and corporate groups.",
+          id: "visa",
+          title: "Visa Services",
+          desc: "Full visa support for all popular destinations worldwide including Schengen, UK, USA, and more. Our experts handle all documentation and requirements on your behalf.",
         }
       ]
     },
@@ -380,7 +380,7 @@ export const i18n = {
         errorPhone: "Phone number is required",
         errorService: "Please select a service",
         errorMessage: "Message must be at least 10 characters",
-        types: ["Flight Booking", "Hotels", "Car Rental", "Hajj & Umrah Packages", "Domestic Trip", "International Tour", "Other"]
+        types: ["Flight Booking", "Hotels", "Car Rental", "Hajj & Umrah Packages", "Domestic Trip", "International Tour", "Visa Services", "Other"]
       }
     },
     footer: {
