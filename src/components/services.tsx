@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
-import { Plane, Building2, Car, Moon, MapPin, Globe2, Stamp, LucideIcon } from 'lucide-react';
+import { Plane, Building2, Moon, MapPin, Globe2, Stamp, LucideIcon } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
 const icons: Record<string, LucideIcon> = {
   flights: Plane,
   hotels: Building2,
-  cars: Car,
   hajj: Moon,
   domestic: MapPin,
   international: Globe2,
