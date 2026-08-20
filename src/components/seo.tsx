@@ -26,7 +26,7 @@ export function SEO() {
         "alternateName": "فلاي سيف لخدمات السفر",
         "url": BASE_URL,
         "image": `${BASE_URL}/favicon.svg`,
-        "telephone": "+966112345678",
+        "telephone": "+966537728939",
         "email": "info@flysafesa.com",
         "address": {
           "@type": "PostalAddress",
@@ -49,7 +49,7 @@ export function SEO() {
         "alternateName": "فلاي سيف",
         "url": BASE_URL,
         "image": `${BASE_URL}/favicon.svg`,
-        "telephone": "+966112345678",
+        "telephone": "+966537728939",
         "email": "info@flysafesa.com",
         "priceRange": "$$",
         "currenciesAccepted": "SAR",
