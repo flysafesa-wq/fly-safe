@@ -26,8 +26,8 @@ export function SEO() {
         "alternateName": "فلاي سيف لخدمات السفر",
         "url": BASE_URL,
         "image": `${BASE_URL}/favicon.svg`,
-        "telephone": "+966537728939",
-        "email": "info@flysafesa.com",
+        "telephone": "+966503114242",
+        "email": "flysafe.ksa@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Umar Ibn Al Khatab Rd, Al Bishr",
