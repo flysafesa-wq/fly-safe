@@ -147,9 +147,9 @@ export const i18n = {
       subtitle: "فريقنا جاهز لمساعدتك في التخطيط لرحلتك المثالية",
       info: {
         address: "طريق عمر بن الخطاب، البشر، بريدة 52379، المملكة العربية السعودية",
-        phone: "+966 55 997 7926",
-        whatsapp: "+966 55 997 7926",
-        email: "info@flysafesa.com",
+        phone: "+966 50 311 4242",
+        whatsapp: "+966 50 311 4242",
+        email: "flysafe.ksa@gmail.com",
         hours: "صباحاً: ٨ – ١٢  |  مساءً: ٤ – ١١",
         addressLabel: "العنوان",
         phoneLabel: "موبايل / واتساب",
