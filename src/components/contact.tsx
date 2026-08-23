@@ -95,7 +95,7 @@ export function Contact() {
         ];
 
     const message = lines.filter(Boolean).join('\n');
-    const whatsappUrl = `https://wa.me/966559977926?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/966503114242?text=${encodeURIComponent(message)}`;
 
     const a = document.createElement('a');
     a.href = whatsappUrl;
